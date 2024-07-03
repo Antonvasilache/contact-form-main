@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <main class="container-wrapper">
+      <form class="contact-form">
+        <div class="form-content">
+          <h1 class="heading">Contact Us</h1>
+          <div class="form-content-sub">
+            <fieldset class="name-container">
+              <div class="name-input">
+                <label for="first-name" class="body-sm-regular"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  aria-invalid="true"
+                  aria-describedby="first-name-error"
+                  aria-required="true"
+                  class="body-md-regular"
+                />
+                <p id="first-name-error" class="error">
+                  This field is required
+                </p>
+              </div>
+              <div class="name-input">
+                <label for="last-name" class="body-sm-regular">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  aria-invalid="true"
+                  aria-describedby="last-name-error"
+                  aria-required="true"
+                  class="body-md-regular"
+                />
+                <p id="last-name-error" class="error">This field is required</p>
+              </div>
+            </fieldset>
+            <fieldset class="email-container">
+              <label for="email" class="body-sm-regular">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                aria-invalid="true"
+                aria-describedby="email-error"
+                class="body-md-regular"
+              />
+              <p id="email-error" class="error">
+                Please enter a valid email address
+              </p>
+            </fieldset>
+            <fieldset class="query-container" id="query">
+              <legend>Query Type</legend>
+              <div class="query-input">
+                <div class="query-option">
+                  <input
+                    type="radio"
+                    id="general"
+                    name="request-type"
+                    value="general"
+                    aria-invalid="true"
+                    aria-describedby="query-error"
+                    class="body-md-regular"
+                  />
+                  <label for="general">General Enquiry</label>
+                </div>
+                <div class="query-option">
+                  <input
+                    type="radio"
+                    id="support"
+                    name="request-type"
+                    value="support"
+                    aria-invalid="true"
+                    aria-describedby="query-error"
+                    class="body-md-regular"
+                  />
+                  <label for="support">Support Request</label>
+                </div>
+              </div>
+              <p id="query-error" class="error">Please select a query type</p>
+            </fieldset>
+            <fieldset class="message-container">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                aria-invalid="true"
+                aria-describedby="message-error"
+                class="body-md-regular"
+              ></textarea>
+              <p id="message-error" class="error">This field is required</p>
+            </fieldset>
+          </div>
+        </div>
+        <fieldset class="consent-container">
+          <div class="consent-input">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              aria-invalid="true"
+              aria-describedby="consent-error"
+              class="hidden-checkbox"
+            />
+
+            <label for="consent" class="consent-sub body-sm-regular">
+              <div class="checkbox-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                  class="custom-checkbox"
+                >
+                  <path
+                    fill=""
+                    d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z"
+                  />
+                </svg>
+              </div>
+              <span>I consent to being contacted by the team</span>
+            </label>
+          </div>
+          <p id="consent-error" class="error">
+            To submit this form, please consent to being contacted
+          </p>
+        </fieldset>
+
+        <button class="submit-button body-md-bold">Submit</button>
+      </form>
+      <div class="toast">
+        <p class="toast-success body-md-bold">
+          <img
+            src="/assets/images/icon-success-check.svg"
+            alt="Success icon"
+          />Message Sent!
+        </p>
+        <p class="toast-message body-sm-regular">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
